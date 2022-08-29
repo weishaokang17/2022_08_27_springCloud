@@ -16,6 +16,7 @@ eureka:
       #defaultZone: http://eureka7001.com:7001/eureka/
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     #server:
-    #关闭自我保护机制，保证不可用服务被及时踢除
+    #关闭自我保护机制，保证不可用服务被及时踢除   自我保护机制默认是开启的
     #enable-self-preservation: false
+    #让服务端每隔2秒扫描一次
     #eviction-interval-timer-in-ms: 2000

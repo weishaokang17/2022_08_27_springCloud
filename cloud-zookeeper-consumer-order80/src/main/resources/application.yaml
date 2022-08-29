@@ -1,0 +1,10 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-zookeeper-consumer-order
+  cloud:
+    #注册到zookeeper地址
+    zookeeper:
+      connect-string: CentOS7.9_02:2181,CentOS7.9_03:2181,CentOS7.9_04:2181
