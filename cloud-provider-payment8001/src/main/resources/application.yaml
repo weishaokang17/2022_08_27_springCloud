@@ -20,3 +20,14 @@ spring:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: per.wsk.springcloud.entity    # 所有Entity别名类所在包
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #集群
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+      #单机
+      #defaultZone: http://eureka7001.com:7001/eureka
