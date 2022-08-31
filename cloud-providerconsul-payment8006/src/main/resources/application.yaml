@@ -1,0 +1,19 @@
+###consul服务端口号
+server:
+  port: 8006
+
+# 服务名称
+spring:
+  application:
+    name: cloud-consul-provider-payment
+
+  ####consul注册中心地址
+  cloud:
+    consul:
+      # consul注册中心地址的ip
+      host: localhost
+      # consul注册中心地址的端口号
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}
