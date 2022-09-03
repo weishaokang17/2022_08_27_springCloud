@@ -16,4 +16,11 @@ public interface PaymentService {
      * @return
      */
     public String paymentInfo_TimeOut(Integer id);
+
+    /**
+     * 测试 熔断功能
+     * @param id
+     * @return
+     */
+    String paymentCircuitBreaker(Integer id);
 }
