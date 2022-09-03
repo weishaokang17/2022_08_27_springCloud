@@ -6,9 +6,39 @@ spring:
   application:
     name: cloud-gateway
 
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #开启从注册中心动态创建路由的功能，利用微服务名进行路由,即要用动态路由，这个必须开启
+          enabled: true
+      routes:
+        # - 在yaml文件中，表示数组或集合中的一个元素，routes这个配置项是一个集合或数组
+        - id: cloud-user-service #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:10100 #匹配后提供服务的路由地址
+          predicates:
+            - Path=/user/** #断言，该服务（就是当前的网关这个服务）的请求地址，ip:9527 后面的路径，相匹配的进行路由
+        - id: cloud-payment-service
+          # 动态路由 lb：是负载均衡（Load Balance）的缩写，后面是映射到的服务的服务名
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/payment/**
+            - After=2022-02-21T15:51:37.485+08:00[Asia/Shanghai] #在上海时间这个时间点之后的访问才能匹配该路由
+          filters:
+            - StripPrefix=1 # 去除第一个路径
+
+
+
+
+
+
+
+
+
+
+
 eureka:
   instance:
-    #在eureka注册中心的名称
     hostname: cloud-gateway-service
 
   client: #服务提供者provider注册进eureka服务列表内
