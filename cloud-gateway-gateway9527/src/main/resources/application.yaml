@@ -1,6 +1,17 @@
 server:
   port: 9527
 
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+
+  client: #服务提供者provider注册进eureka服务列表内
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+
 #服务名称
 spring:
   application:
@@ -25,7 +36,7 @@ spring:
             - Path=/payment/**
             - After=2022-02-21T15:51:37.485+08:00[Asia/Shanghai] #在上海时间这个时间点之后的访问才能匹配该路由
           filters:
-            - StripPrefix=1 # 去除第一个路径
+            - StripPrefix=1 # 去除 域名后面的 第一个斜杠/ 中的 路径
 
 
 
@@ -37,12 +48,3 @@ spring:
 
 
 
-eureka:
-  instance:
-    hostname: cloud-gateway-service
-
-  client: #服务提供者provider注册进eureka服务列表内
-    service-url:
-      register-with-eureka: true
-      fetch-registry: true
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
