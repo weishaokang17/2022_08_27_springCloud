@@ -1,11 +1,11 @@
 server:
-  port: 13345
+  port: 13366
 
 
 #服务名称
 spring:
   application:
-    name: config-client
+    name: config-client02
 
   cloud:
     #Config客户端配置

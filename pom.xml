@@ -31,6 +31,7 @@
         <module>cloud-sale-service10200</module>
         <module>cloud-config-center-13344</module>
         <module>cloud-config-client13345</module>
+        <module>cloud-config-client-13366</module>
     </modules>
 
 
