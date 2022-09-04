@@ -28,8 +28,8 @@
         <module>cloud-gateway-gateway9527</module>
         <module>cloud-consumer-hystrix-dashboard9002</module>
         <module>cloud-user-service10100</module>
-        <module>cloud-user-service10111</module>
         <module>cloud-sale-service10200</module>
+        <module>cloud-config-center-13344</module>
     </modules>
 
 
