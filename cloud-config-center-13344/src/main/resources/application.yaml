@@ -14,9 +14,9 @@ spring:
           #uri: https://gitee.com/wei-shaokang/springcloud_config01.git
           #username: 2458240767@qq.com
           #password: wskzxw200817
-          #search-paths:
-            #- orderSystem
-            #- prod
+          search-paths:
+            - orderSystem
+            - prod
       #label: master
 
 #服务注册到eureka地址

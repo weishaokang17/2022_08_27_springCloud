@@ -5,20 +5,36 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @RestController
 @Slf4j
 public class ClientController {
 
 
-//    @Value("${spring.database.url}")
-//    @Value("${user.name}")
-    @Value("${counrty.city.team}")
+    @Value("${spring.datasource.url}")
     private String databaseUrl;
 
+    @Value("${henan.anyang.haxian}")
+    private String xiangzhen;
+
+    @Value("${collage.specialty}")
+    private String zhuanye;
+
+    @Value("${user.name}")
+    private String userName;
+
     @GetMapping("/configInfo")
-    public String getConfigInfo()
-    {
-        return databaseUrl;
+    public Map<String,Object> getConfigInfo() {
+        Map map = new HashMap<>();
+        map.put("databaseUrl",databaseUrl);
+        map.put("xiangzhen",xiangzhen);
+        map.put("zhuanye",zhuanye);
+        map.put("userName",userName);
+        return map;
     }
 
 }
