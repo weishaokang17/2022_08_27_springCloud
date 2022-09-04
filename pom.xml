@@ -30,6 +30,7 @@
         <module>cloud-user-service10100</module>
         <module>cloud-sale-service10200</module>
         <module>cloud-config-center-13344</module>
+        <module>cloud-config-client13345</module>
     </modules>
 
 
