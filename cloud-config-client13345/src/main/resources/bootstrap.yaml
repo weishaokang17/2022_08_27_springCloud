@@ -8,19 +8,21 @@ spring:
     name: config-client
 
   cloud:
-    #config 客户端配置
-    label: master
-    name: config-dev.yml
-    #profile: prd
-    #上述3个综合：master分支上jdbc-prd.yml的配置文件被读取 http://localhost:13344/master/jdbc-prd.yml
-    uri: http://localhost:13344
-  #cloud[1]:
-    #config 客户端配置
-    #label: master
-   # name: jdbc
-    #profile: prd
-    #上述3个综合：master分支上jdbc-prd.yml的配置文件被读取 http://localhost:13344/master/jdbc-prd.yml
-    #uri: http://localhost:13344
+    #Config客户端配置
+    config:
+      #config 客户端配置
+      label: master
+      name: config-dev,config-prd,config-test
+      #profile: dev
+      #上述3个综合：master分支上jdbc-prd.yml的配置文件被读取 http://localhost:13344/master/jdbc-prd.yml
+      uri: http://localhost:13344
+    #cloud[1]:
+      #config 客户端配置
+      #label: master
+     # name: jdbc
+      #profile: prd
+      #上述3个综合：master分支上jdbc-prd.yml的配置文件被读取 http://localhost:13344/master/jdbc-prd.yml
+      #uri: http://localhost:13344
 
 
 

@@ -11,7 +11,8 @@ public class ClientController {
 
 
 //    @Value("${spring.database.url}")
-    @Value("${user.name}")
+//    @Value("${user.name}")
+    @Value("${counrty.city.team}")
     private String databaseUrl;
 
     @GetMapping("/configInfo")
