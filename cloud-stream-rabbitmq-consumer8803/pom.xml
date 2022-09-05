@@ -9,13 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-stream-rabbitmq-provider8801</artifactId>
+    <artifactId>cloud-stream-rabbitmq-consumer8803</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -23,24 +22,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
-        <!--引入 SpringCloud Stream 消息驱动 连接 rabbitmq的依赖，
-            把SpringCloud Stream消息驱动比作jdbc，rabbitmq比作mysql，那么下面这个依赖
-            就是jdbc连接mysql的依赖。
-            同理，如果用的中间件是kafka，那么下面这个依赖就改成 spring cloud stram 消息驱动连接kafka的依赖
-            -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!--基础配置-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -59,5 +51,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
 </project>

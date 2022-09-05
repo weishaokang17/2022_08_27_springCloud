@@ -15,16 +15,15 @@ public class StreamMQListener {
     @Value("${server.port}")
     private String serverPort;
 
-
-    @StreamListener(Sink.INPUT)
-    public void input2(Message<per.wsk.springcloud.entity.Message> message){
-        System.out.println("消费者1号,----->接受到的消息: "+message.getPayload()+"\t  port: "+serverPort);
-    }
-
     /*
     @StreamListener(Sink.INPUT)
     public void input(Message<String> message){
         System.out.println("消费者1号,----->接受到的消息: "+message.getPayload()+"\t  port: "+serverPort);
     }
      */
+
+    @StreamListener(Sink.INPUT)
+    public void input2(Message<per.wsk.springcloud.entity.Message> message){
+        System.out.println("消费者2号,----->接受到的消息: "+message.getPayload()+"\t  port: "+serverPort);
+    }
 }
