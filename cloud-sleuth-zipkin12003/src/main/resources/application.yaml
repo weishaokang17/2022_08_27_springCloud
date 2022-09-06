@@ -9,10 +9,10 @@ spring:
   zipkin:
     ## zipkin server 的请求地址
     base-url: http://localhost:9411
-    sleuth:
-      sampler:
-        #采样率值介于 0 到 1 之间，数字越大，采集的信息越全面，但也越耗时，1 则表示全部采集
-        probability: 1.0
+  sleuth:
+    sampler:
+      #采样率值介于 0 到 1 之间，数字越大，采集的信息越全面，但也越耗时，1 则表示全部采集
+      probability: 1.0
 
 
 eureka:
