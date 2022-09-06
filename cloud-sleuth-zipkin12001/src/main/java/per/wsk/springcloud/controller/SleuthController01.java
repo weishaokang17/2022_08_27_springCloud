@@ -23,6 +23,9 @@ public class SleuthController01 {
     public String sleuthZipKin02(){
         service.sleuthZipKin03(serverName);
 
-        return "服务 "+serverName+" 的接口 1 被 客户端访问";
+        String result = "服务 "+serverName+" 的接口 1 被 客户端访问";
+        System.out.println(result);
+
+        return result;
     }
 }
