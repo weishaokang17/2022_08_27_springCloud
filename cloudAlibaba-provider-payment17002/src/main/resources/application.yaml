@@ -11,6 +11,7 @@ spring:
         #配置nacos注册中心的地址
         server-addr: localhost:8848
 
+#  * 表示所有的Actuator端点都会对外暴露
 management:
   endpoints:
     web:
