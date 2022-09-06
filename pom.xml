@@ -39,6 +39,9 @@
         <module>cloud-sleuth-zipkin12002</module>
         <module>cloud-sleuth-zipkin12003</module>
         <module>cloud-sleuth-zipkin12004</module>
+        <module>cloudalibaba-provider-payment17001</module>
+        <module>cloudAlibaba-provider-payment17002</module>
+        <module>cloudAlibaba-consumer-order14001</module>
     </modules>
 
 

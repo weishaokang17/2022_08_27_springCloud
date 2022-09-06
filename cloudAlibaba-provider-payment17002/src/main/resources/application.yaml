@@ -1,0 +1,18 @@
+server:
+  port: 17002
+
+
+spring:
+  application:
+    name: cloudAlibaba-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        #配置nacos注册中心的地址
+        server-addr: localhost:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
