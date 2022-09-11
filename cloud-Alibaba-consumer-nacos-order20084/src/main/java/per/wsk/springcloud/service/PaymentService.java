@@ -7,7 +7,7 @@ import per.wsk.springcloud.entity.CommonResult;
 import per.wsk.springcloud.entity.Payment;
 import per.wsk.springcloud.service.impl.PaymentFallbackService;
 
-@FeignClient(value = "nacos-payment-provider",fallback = PaymentFallbackService.class)
+@FeignClient(value = "nacos-Alibaba-payment-provider",fallback = PaymentFallbackService.class)
 public interface PaymentService {
 
 

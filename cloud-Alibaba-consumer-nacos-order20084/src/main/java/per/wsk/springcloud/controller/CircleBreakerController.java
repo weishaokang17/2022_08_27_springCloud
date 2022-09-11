@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class CircleBreakerController {
 
-    public static final String SERVICE_URL = "http://nacos-payment-provider";
+    public static final String SERVICE_URL = "http://nacos-Alibaba-payment-provider";
 
     @Resource
     private RestTemplate restTemplate;
@@ -60,5 +60,7 @@ public class CircleBreakerController {
     public CommonResult<Payment> paymentSQL(@PathVariable("id") Long id) {
         return paymentService.paymentSQL(id);
     }
+
+
 
 }
