@@ -1,0 +1,26 @@
+server:
+  port: 29004
+
+spring:
+  application:
+    # 服务名称
+    name: nacos-Alibaba-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        #nacos注册地址
+        server-addr: localhost:8848 #配置Nacos地址
+
+    sentinel:
+      transport:
+        #配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        port: 8719
+
+#表示所有的Actuator端点都会对外暴露
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
